@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router, RouterEvent } from '@angular/router';
+import { filter, map } from 'rxjs';
+
+const navRequired = [
+  '/',
+  '/protected'
+];
 
 @Component({
   selector: 'app-root',
@@ -6,5 +13,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-fun';
+  public shouldShowNavBar: boolean = false;
+  public title = 'angular-fun';
+
+  public constructor(
+  ) {}
+
+
+  public loginClicked(): void {
+    localStorage.setItem('isLoggedin', 'true');
+  }
+
+  public logoutClicked(): void {
+    localStorage.removeItem('isLoggedin');
+  }
 }

@@ -1,0 +1,10 @@
+:host {
+  .nav-top {
+    display: flex;
+
+    a, button:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}
+  
