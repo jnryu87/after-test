@@ -1,3 +1,10 @@
+It's the newest version of Angular v15 with node v16.18.1
+Please clone this repo
+```
+npm install
+npm start
+```
+
 I just needed 3 more mins...
 
 What went wrong?
